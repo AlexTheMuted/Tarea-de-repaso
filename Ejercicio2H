@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA V - Página Principal</title>
+  <link rel="stylesheet" href="Ejercicio2C.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1 id="titulo-principal">Grand Theft Auto V</h1>
+        <img src="https://static.vecteezy.com/system/resources/previews/027/127/540/non_2x/grand-theft-auto-gta-v-logo-grand-theft-auto-gta-v-icon-transparent-free-png.png" width="180">
+    <nav>
+      <ul>
+        <li><a href="#descripcion">Descripción</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Descripción -->
+  <section id="descripcion">
+    <h2>Descripción del Juego</h2>
+    <p>
+      *GTA V* es un videojuego de acción-aventura desarrollado por Rockstar Games. Ambientado en la ficticia ciudad de Los Santos, 
+      permite a los jugadores explorar un mundo abierto y participar en misiones emocionantes.
+    </p>
+    <img src="https://i.blogs.es/dfbccc/trucosgtavps4/1366_2000.jpg" alt="Imagen de GTA V" class="imagen-juego">
+  </section>
+
+  <!-- Sección Personajes -->
+  <section id="personajes">
+    <h2>Personajes Principales</h2>
+    <article>
+      <h3>Michael De Santa</h3>
+      <p>Un ex ladrón de bancos que busca una nueva vida.</p>
+    </article>
+    <article>
+      <h3>Franklin Clinton</h3>
+      <p>Un joven ambicioso que quiere ascender en el mundo criminal.</p>
+    </article>
+    <article>
+      <h3>Trevor Philips</h3>
+      <p>Un criminal impredecible y peligroso.</p>
+    </article>
+  </section>
+
+  <!-- Botón Interactivo -->
+  <section id="curiosidades">
+    <h2>Curiosidades</h2>
+    <button id="mostrar-info">Mostrar Curiosidades</button>
+    <dialog id="info-dialog">
+      <p>Sabías que *GTA V* ha vendido más de 150 millones de copias en todo el mundo desde su lanzamiento en 2013?</p>
+      <button id="cerrar-dialogo">Cerrar</button>
+    </dialog>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Rockstar Games. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script para interactividad -->
+  <script>
+    const dialog = document.getElementById('info-dialog');
+    const mostrarBtn = document.getElementById('mostrar-info');
+    const cerrarBtn = document.getElementById('cerrar-dialogo');
+
+    mostrarBtn.addEventListener('click', () => dialog.showModal());
+    cerrarBtn.addEventListener('click', () => dialog.close());
+  </script>
+</body>
+</html>
