@@ -1,0 +1,105 @@
+/* Diferencia entre clase e ID:
+   - Clase: Se utiliza para aplicar estilos a múltiples elementos. Ej: .clase-comun.
+   - ID: Se utiliza para aplicar estilos a un único elemento. Ej: #titulo-principal.
+*/
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#titulo-principal {
+  font-size: 2.5em;
+}
+
+/* Sección Descripción */
+#descripcion {
+  padding: 2em;
+  background-color: #e9ecef;
+}
+
+.imagen-juego {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Sección Personajes */
+#personajes {
+  padding: 2em;
+  background-color: #fff;
+}
+
+/* Botón y diálogo */
+#curiosidades {
+  padding: 2em;
+  text-align: center;
+}
+
+#mostrar-info {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+#mostrar-info:hover {
+  background-color: #0056b3;
+}
+
+dialog {
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cerrar-dialogo {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+}
+
+#cerrar-dialogo:hover {
+  background-color: #c82333;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
