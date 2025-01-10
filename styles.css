@@ -1,8 +1,3 @@
-/* Diferencia entre clase e ID:
-   - Clase: Se utiliza para aplicar estilos a múltiples elementos. Ej: .clase-comun.
-   - ID: Se utiliza para aplicar estilos a un único elemento. Ej: #titulo-principal.
-*/
-
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
@@ -12,12 +7,37 @@ body {
   padding: 0;
 }
 
-/* Estilo del header */
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
 header {
-  background-color: #333;
+  background-image: url(https://articles-images.sftcdn.net/wp-content/uploads/sites/7/2014/09/gta-v-header-06.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  padding: 1em;
+  padding: 2em 1em;
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header nav ul {
@@ -33,16 +53,24 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Título principal */
 #titulo-principal {
   font-size: 2.5em;
+  animation: slideIn 1.2s ease-in-out;
 }
 
 /* Sección Descripción */
 #descripcion {
   padding: 2em;
   background-color: #e9ecef;
+  animation: fadeIn 1.5s ease;
 }
 
 .imagen-juego {
@@ -50,18 +78,35 @@ header nav ul li a {
   max-width: 600px;
   display: block;
   margin: 1em auto;
+  transition: transform 0.3s ease;
+}
+
+.imagen-juego:hover {
+  transform: scale(1.05);
 }
 
 /* Sección Personajes */
 #personajes {
   padding: 2em;
   background-color: #fff;
+  animation: slideIn 1.5s ease forwards;
+}
+
+#personajes article {
+  margin-bottom: 1em;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#personajes article:hover {
+  transform: translateX(10px);
+  background-color: #f8f9fa;
 }
 
 /* Botón y diálogo */
 #curiosidades {
   padding: 2em;
   text-align: center;
+  animation: fadeIn 1.5s ease;
 }
 
 #mostrar-info {
@@ -70,10 +115,12 @@ header nav ul li a {
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #mostrar-info:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 dialog {
@@ -82,6 +129,7 @@ dialog {
   padding: 1em;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
 }
 
 #cerrar-dialogo {
@@ -90,6 +138,7 @@ dialog {
   border: none;
   padding: 0.3em 0.6em;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #cerrar-dialogo:hover {
@@ -102,4 +151,16 @@ footer {
   color: white;
   text-align: center;
   padding: 1em 0;
+  animation: fadeIn 2s ease;
+}
+/* Barra de progreso */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #00bcd4;
+  z-index: 1000;
+  transition: width 0.1s ease;
 }
